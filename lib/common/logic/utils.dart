@@ -64,7 +64,7 @@ List<GetPage> getPages() {
   return [
     GetPage(
       name: Constants.gameScreenRoute,
-      page: () => GameScreen(),
+      page: () => const GameScreen(),
     ),
     GetPage(
       name: Constants.splashScreenRoute,
@@ -72,11 +72,11 @@ List<GetPage> getPages() {
     ),
     GetPage(
       name: Constants.homeScreenRoute,
-      page: () => HomeScreen(),
+      page: () => const HomeScreen(),
     ),
     GetPage(
       name: Constants.descriptionScreenRoute,
-      page: () => DescriptionScreen(),
+      page: () => const DescriptionScreen(),
     ),
   ];
 }
@@ -93,7 +93,7 @@ void navigateToScreen(
     {required Widget page, List<dynamic> arguments = const []}) {
   Get.to(
     page,
-    duration: const Duration(seconds: 1),
+    duration: const Duration(milliseconds: 700),
     transition: Transition.fadeIn,
   );
 }
@@ -104,7 +104,7 @@ void navigateOffScreen(
   Get.off(
     () => page,
     arguments: arguments,
-    duration: const Duration(seconds: 1),
+    duration: const Duration(milliseconds: 700),
     transition: Transition.fadeIn,
   );
 }
