@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:legendary_buffalo/common/logic/constants.dart';
@@ -88,13 +89,24 @@ void setPortraitMode() {
   ]);
 }
 
+void navigateToScreen(
+    {required Widget page, List<dynamic> arguments = const []}) {
+  Get.to(
+    page,
+    duration: const Duration(seconds: 1),
+    transition: Transition.fadeIn,
+  );
+}
+
 //Navigates to different screens
-void navigateToAnyScreen(String route, List<dynamic> arguments) {
-  if (route == Constants.gameScreenRoute) {
-    Get.toNamed(route);
-  } else {
-    Get.offAndToNamed(route, arguments: arguments);
-  }
+void navigateOffScreen(
+    {required Widget page, List<dynamic> arguments = const []}) {
+  Get.off(
+    () => page,
+    arguments: arguments,
+    duration: const Duration(seconds: 1),
+    transition: Transition.fadeIn,
+  );
 }
 
 //Returns a default array

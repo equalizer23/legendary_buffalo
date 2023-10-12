@@ -16,14 +16,14 @@ class ReusableButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-        onTap: () => action,
+        onTap: action,
         child: Stack(
           alignment: Alignment.center,
           children: [
             Image(
               image: AssetImage(button),
             ),
-            const ReusableText(text: 'Start', size: 34)
+            ReusableText(text: text, size: 34)
           ],
         ));
   }

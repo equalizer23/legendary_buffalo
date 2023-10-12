@@ -2,6 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:legendary_buffalo/common/logic/utils.dart';
+import 'package:legendary_buffalo/ui/home_screen.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 class SplashScrenController extends GetxController
@@ -109,6 +111,14 @@ class SplashScrenController extends GetxController
     )..repeat();
     Permission.notification.request();
     // fetchAllData();
+  }
+
+  @override
+  void onReady() {
+    super.onReady();
+    delay(3000, action: () {
+      navigateOffScreen(page: const HomeScreen());
+    });
   }
 
   //Disposes an animation
