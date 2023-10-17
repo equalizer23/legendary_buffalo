@@ -32,7 +32,7 @@ class HomeScreen extends StatelessWidget {
                     ReusableButton(
                       button: buttonSquare,
                       text: 'Start',
-                      action: () => navigateToScreen(page: const GameScreen()),
+                      action: () => navigateToScreen(page: GameScreen()),
                     ),
                     Container(
                       margin: const EdgeInsets.only(top: 30),

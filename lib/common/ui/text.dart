@@ -1,13 +1,9 @@
 class StringText {
   static String rules = '''
-  Game Board: The game consists of a 5x5 grid, where each cell represents a box. One of the cells contains a bomb, while the others are regular boxes.
-  Scoring: Each time you click on a regular box, your score increases by one point.
-  Bomb Appearance: At the beginning of the game, the bomb is randomly placed in one of the cells on the game board.
-  Clicking: The player can click on any cell to reveal its content. If it is a regular box, the score increases. If it is the bomb, the game ends.
-  Time Limit: The game does not have a time limit. The player can continue playing until they click on the bomb.
-  Winning: There is no specific winning condition. The player can aim to achieve their highest score.
-  Losing: The game ends if the player clicks on the bomb.
-  High Score: The game keeps track of the players highest score across multiple plays.
-  Restart Option: After the game ends (either by clicking on the bomb or when the player chooses to stop), the player can choose to play again to beat their high score
+  Welcome to the NBA Player Generator! Get ready to embark on a basketball journey. To begin the game, simply press the "Start" button. Initially, you'll be greeted by a captivating loading animation that builds up the excitement.
+
+  Once the loading is complete, you'll be introduced to your first NBA player. Explore their intriguing statistics, including their date of birth, NBA debut, and their weight. Test your luck by generating another player - you might even stumble upon a legendary icon of the game!
+
+  So, what are you waiting for? Hit that button beneath the player card and dive into the world of basketball greatness. Who will you discover next on your journey through the NBA? Let's find out!
 ''';
 }

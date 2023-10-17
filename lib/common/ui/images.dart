@@ -20,6 +20,10 @@ const String topLeftDecor = 'assets/images/eagle_top_left.png';
 //Logo
 const String logo = 'assets/images/logo.png';
 
+//Text
+const String randomPlayer = 'assets/images/random_player_text.png';
+const String descriptionText = 'assets/images/description_text.png';
+
 //Other
 const String history = 'assets/images/history.png';
 const String frame = 'assets/images/frame.png';

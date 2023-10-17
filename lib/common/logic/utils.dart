@@ -2,12 +2,6 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:legendary_buffalo/common/logic/constants.dart';
-import 'package:legendary_buffalo/models/api_request.dart';
-import 'package:legendary_buffalo/ui/description_screen.dart';
-import 'package:legendary_buffalo/ui/game_screen.dart';
-import 'package:legendary_buffalo/ui/home_screen.dart';
-import 'package:legendary_buffalo/ui/splash_screen.dart';
 
 extension Decoder on String {
   //Returns a decoded string
@@ -59,28 +53,6 @@ Map<String, String> defaultAppsData(String appsId) {
   };
 }
 
-//Returns a list of Get Pages
-List<GetPage> getPages() {
-  return [
-    GetPage(
-      name: Constants.gameScreenRoute,
-      page: () => const GameScreen(),
-    ),
-    GetPage(
-      name: Constants.splashScreenRoute,
-      page: () => SplashScreen(),
-    ),
-    GetPage(
-      name: Constants.homeScreenRoute,
-      page: () => const HomeScreen(),
-    ),
-    GetPage(
-      name: Constants.descriptionScreenRoute,
-      page: () => const DescriptionScreen(),
-    ),
-  ];
-}
-
 //Sets a portrait mode in the screen
 void setPortraitMode() {
   SystemChrome.setPreferredOrientations([
@@ -125,17 +97,6 @@ void delay(int milliseconds, {VoidCallback action = defaultAction}) async {
 //Returns a random player id
 int getRandomPlayerId() {
   var rand = Random();
-  int number = rand.nextInt(100);
+  int number = rand.nextInt(200);
   return number;
-}
-
-//Returns a Map for Api Call
-Map<String, dynamic> prepareApiData({required ApiRequest apiRequest}) {
-  return {
-    "appsFlyerData": apiRequest.appsData,
-    "referrerData": apiRequest.referrer,
-    "dynamicData": apiRequest.userData,
-    "applicationTitle": apiRequest.title,
-    "facebookData": apiRequest.deeplink
-  };
 }

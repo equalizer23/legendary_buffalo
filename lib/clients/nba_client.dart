@@ -12,17 +12,21 @@ class NbaClient {
     dio.options.baseUrl = baseUrl;
     dio.options.connectTimeout = const Duration(seconds: 30);
     _mainHeaders = {
-      'Content-type': 'application/json; charset=UTF-8',
-      'x-rapidapi-key': '73127f5b8amsh1e2620f01805a7fp163bdajsn81433580efd2',
-      'x-rapidapi-host': 'api-nba-v1.p.rapidapi.com'
+      'X-RapidAPI-Key': 'a7258b7a15msh0f9a27ee04eae7ep1bca14jsn716cd65b6a1f',
+      'X-RapidAPI-Host': 'api-nba-v1.p.rapidapi.com'
     };
   }
 
   Future<Response> getPlayer(int id, String path) async {
+    print('Base url - $baseUrl');
+    print('Path - $path');
     try {
-      dio.options.queryParameters = {'id': id};
-      Response response =
-          await dio.get(path, options: Options(headers: _mainHeaders));
+      var params = {"id": id};
+      Response response = await dio.get(path,
+          options: Options(
+            headers: _mainHeaders,
+          ),
+          queryParameters: params);
       return response;
     } on IOException catch (e) {
       print(e);

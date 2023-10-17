@@ -16,15 +16,16 @@ class DescriptionScreen extends StatelessWidget {
           image: bg3,
           child: SingleChildScrollView(
             child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Image.asset(logo),
-                  ReusableText(
-                    text: StringText.rules,
-                    size: 18,
-                  )
-                ]),
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Image.asset(descriptionText),
+                ReusableText(
+                  text: StringText.rules,
+                  size: 18,
+                )
+              ],
+            ),
           ),
         ),
       ),
